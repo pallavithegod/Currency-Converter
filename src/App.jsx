@@ -7,8 +7,8 @@ function App() {
   return (
     <>
     <body className='bg-gray-900'>
-      <h1 className="text-3xl text-white font-bold underline">
-      Hello world!
+      <h1 className="text-3xl text-white font-bold">
+      CURRENCY CONVERTER
     </h1>
     </body>
     </>
