@@ -2,8 +2,7 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  //
-
+  
   return (
     <>
     <body className='bg-gray-900'>
