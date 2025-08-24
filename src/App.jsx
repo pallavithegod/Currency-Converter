@@ -1,7 +1,5 @@
 import { useState } from 'react'
-// import './App.css'
-import InputBox from './Components/InputBox'
-// export {InputBox}
+import InputBox from './components/InputBox.jsx'
 import useCurrencyInfo from './Hooks/useCurrencyInfo'
 
 function App() {
@@ -30,15 +28,15 @@ function App() {
   
   return (
     <>
-    <div className='w-full h-screen flex flex-wrap justify-center items-center bg-blue-950'>
+    <div className='w-full h-screen flex flex-wrap justify-center items-center gap-0 bg-blue-950'>
 
       
-      <h1 className="text-4xl text-gray-50 font-bold">
+      <h1 className="text-4xl text-gray-50 font-bold ">
         CURRENCY CONVERTER
       </h1>
 
       <div className='w-full'>
-        <div className='w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30'>
+        <div className='max-w-md mx-auto border border-gray-60 rounded-lg p-5 my-0 backdrop-blur-sm bg-white/30'>
             <form 
             onSubmit={(e) => {
               e.preventDefault();
@@ -51,8 +49,8 @@ function App() {
                 amount = {amount}
                 onAmountChange = {(amount) => setAmount(amount)}
                 onCurrencyChange = {(currency) => {
-                  // /////////////////////////////////////////////////////////////////////////////////////////
-                  setAmount(amount)
+                 
+                  setFrom(currency)
                 }}
                 currencyOptions = {options}
                 selectCurrency = {from}
@@ -73,7 +71,7 @@ function App() {
                 label = "To"
                 amount = {convertedAmount}
                 onAmountChange = {(amount) => setAmount(amount)}
-                ///////////////////////////////////////////////////////////////
+               
                 onCurrencyChange = {(currency) => {
                   setTo(currency)
                 }}
